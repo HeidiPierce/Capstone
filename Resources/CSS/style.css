@@ -24,23 +24,69 @@ h1 {
   padding: 4px 0;
   /*added background-color to fix the entire header rather than just the icons*/
   background-color: white;
-
 }
 .page-header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 0.75rem;
 }
-.mobile img {
+.logo-title {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.logo-title img {
   height: 3.5rem;
 }
-.iccon {
-  fill: blue;
+.logo-title span {
+  text-transform: uppercase;
+  font-family: 'Cinzel', cursive;
+  font-size: 2rem;
 }
-.mobile > li > a > img:hover {
+.desktop ul {
+  padding-right: 2rem;
+}
+.desktop ul:first-child {
+  margin: 0 auto;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+.header-content li {
+  margin-right: 2rem;
+}
+.header-content li:last-child {
+  margin-right: 1.5rem;
+
+}
+.header-content a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.header-content .oc {
+  background-color: #F16A49;
+}
+.header-content .on {
+  background-color: #97CCC7;
+}
+.header-content .fc {
+  background-color: #22363E;
+
+}
+.header-content .si {
+  background-color: #DB5749;
+}
+
+.header-content > li:hover {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
+}
+ul.mobile {
+  display: none;
 }
 /*main-content: prevents content from scrolling up behind the fixed header*/
 .main-content {
@@ -50,31 +96,49 @@ h1 {
 /*learning box*/
 .learning-box {
   display: flex;
+  align-items: center;
   padding: 2rem 1.5rem;
   top: 6rem;
+  width: 100%;
+  background-color: #F5F5F5;
 }
 .column-1 {
   padding-left: 1.5rem;
+  width: 55%;
+
 }
 .column-2 {
   padding-right: 1.5rem;
+  width: 35%;
+
 }
 .lg-image img {
-  width: 60%;
+  width: 100%;
   height: auto;
+  padding: 2rem 1.5rem;
 }
 .lg-image {
   bottom: 0;
+}
+.lg-content h1 {
+  padding-bottom: 1.5rem;
+}
+.lg-content h2 {
+
 }
 .lg-content {
   padding: 2rem 1rem 2rem;
   top: 0;
 }
 .learning-box .lg-content {
-  background-color: #97CCC7;
+  margin: 0 1.5rem;
+  padding-left: 1rem;
+
 }
 .learning-box .lg-content h2 {
   line-height: 1.3;
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
 }
 .button {
   padding: .5rem 0;
@@ -130,27 +194,42 @@ footer ul {
   font-size: 1.125rem;
 }
   @media only screen and (min-width: 320px) and (max-width: 480px) {
-
+    .page-header ul {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 0.75rem;
+    }
+    ul.desktop {
+      display: none;
+    }
+    ul.mobile {
+      display: flex;
+    }
+    .mobile img {
+      height: 3.5rem;
+    }
+    .mobile > li > a > img:hover {
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3);
+    }
     .learning-box {
       display: block;
       padding: 0;
     }
     .column-1, .column-2{
       padding: 0;
+      width: 100%;
     }
     .learning-box img {
       width: 100%;
+      padding: 0;
     }
-    .lg-content h1 {
-      padding-bottom: 1.5rem;
-    }
-    .lg-content h2 {
-      padding-bottom: 1.5rem;
-      font-size: 1.25rem;
-    }
+
     /*used negative margin to get rid of white space between divs*/
     .learning-box .lg-content {
-      margin-top: -4px;
+      margin: -4px 0 0;
+      background-color: #97CCC7;
     }
     .learning-box .lg-content h1 {
       padding-bottom: 2rem;
