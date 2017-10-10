@@ -160,7 +160,7 @@ ul.mobile {
 .small-content h2 {
   line-height: 1.3;
   padding-bottom: 4px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .small-content p {
   padding: 4px 0;
@@ -186,7 +186,7 @@ ul.mobile {
   display: flex;
   width: 100%;
   margin: 0 0 1rem 0;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 .event:first-child {
   padding-top: 0;
@@ -210,8 +210,42 @@ ul.mobile {
   transition: box-shadow 750ms ease-in-out 0;
 }
 /*coursework section*/
-.coursework .mobile h1 {
-  padding: 2rem 0;
+.coursework .mobile {
+  display: none;
+}
+
+.desktop {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  padding: 2rem 4.5rem;
+  background-color: #F5F5F5;
+}
+.course {
+  margin: 1rem;
+  width: 30%;
+}
+.course img {
+  width: 100%;
+  height: auto;
+}
+.course-content {
+  padding: 1rem 0 0 1rem;
+  line-height: 1.5;
+}
+.course-content h2 {
+  font-family: 'Cinzel', cursive;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.course-content p {
+  font-family: 'Fauna One', serif;
+  padding: 0.25rem 0;
+}
+.course-content p:first-of-type {
+  text-transform: uppercase;
 }
 /*thesis section*/
 .thesis h1 {
@@ -319,16 +353,22 @@ footer ul {
       background-image: url('../images/information-guest-lecture-mobile.jpg');
     }
     /*coursework section*/
+    .coursework .mobile {
+      display: block;
+    }
+    .coursework .desktop {
+      display: none;
+    }
     .small-content {
       width: 92%;
       padding: 0;
       margin: 0 auto;
     }
-    .mobile h1 {
+    .coursework .mobile h1 {
+      padding: 2rem 0;
       text-align: center;
-      padding: 0 0 0 1rem;
     }
-    .mobile h2 {
+    .coursework .mobile h2 {
       font-size: 1.75rem;
       padding: 1rem 0 1.5rem 1rem;
       background-color: #F16A49;
